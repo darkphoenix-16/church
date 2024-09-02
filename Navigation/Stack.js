@@ -9,8 +9,8 @@ export function StackNavigator() {
   return (
     <NavigationContainer>
 
-    <Stack.Navigator initialRouteName='HomeScreen' screenOptions={{headerShown:true}} >
-      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown:true}}/>
+    <Stack.Navigator initialRouteName='HomeScreen' screenOptions={{headerShown:false}} >
+      <Stack.Screen name="HomeScreen" component={HomeScreen}/>
     </Stack.Navigator>
     </NavigationContainer>
   );
