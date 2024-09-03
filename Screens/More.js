@@ -13,7 +13,7 @@ export function More() {
         <Text style={{ fontWeight: "bold", fontSize: 25, textAlign: "center" }}>Jane Doe</Text>
         <Text style={{ textAlign: "center", fontSize: 20, marginBottom: 20 }}>Janedoe@gmail.com</Text>
 
-        <View style={{ margin: 40, borderRadius: 10, padding: 20, elevation: 5 }}>
+        <View style={{ margin: 40, borderRadius: 10, padding: 20, elevation: 5 ,}}>
           <Text style={{ fontWeight: "bold", fontSize: 25, }}>Options</Text>
 
           <View style={{ flexDirection: "row", gap: 30, padding: 20 }}>
@@ -33,7 +33,7 @@ export function More() {
             <Text style={{ fontSize: 20 }}>Help</Text>
           </View>
 
-          <Text style={{fontSize:20, textAlign:"center", marginVertical: 10}}>Log out</Text>
+          <Text style={{fontSize:20, textAlign:"center", marginVertical: 10, color:"red"}}>Log out</Text>
 
         </View>
 
@@ -46,5 +46,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
+    backgroundColor:"antiquewhite"
   }
 })
