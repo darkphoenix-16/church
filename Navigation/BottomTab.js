@@ -1,9 +1,9 @@
 import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home } from "../Screens/Home";
-import { Connect } from "../Screens/Connect";
 import { Media } from "../Screens/Media";
-import { More } from "../Screens/More";
+import { Account } from "../Screens/Acccount";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -19,15 +19,11 @@ export function HomeScreen() {
                         iconName = focused ? 'home' : 'home-outline';
                     }
                    
-                    else if (route.name === 'Connect') {
-                        size = focused ? 35 : 23
-                        iconName = focused ? 'people' : 'people-outline';
-                    }
                     else if (route.name === 'Media') {
                         size = focused ? 35 : 25
                         iconName = focused ? 'videocam' : 'videocam-outline';
                     }
-                    else if (route.name === 'More') {
+                    else if (route.name === 'Account') {
                         size = focused ? 35 : 23
                         iconName = focused ? 'reorder-three' : 'reorder-three-outline';
 
@@ -41,9 +37,8 @@ export function HomeScreen() {
             })}
         >
             <Tab.Screen name="Home" component={Home} options={{ title: "Home" }} />
-            <Tab.Screen name="Connect" component={Connect} options={{ title: "Connect" }}/>
             <Tab.Screen name="Media" component={Media} options={{ title: "Media" }}/>
-            <Tab.Screen name="More" component={More} options={{ title: "More" }}/>
+            <Tab.Screen name="Account" component={Account} options={{ title: "Account" }}/>
             
            
         </Tab.Navigator>

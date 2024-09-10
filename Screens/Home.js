@@ -1,59 +1,43 @@
-import { Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { useContext } from 'react';
+import { AppContext } from '../Components/Global';
 
 
-export function Home() {
+export function Home({ navigation }) {
+    //  const { setUserUID, setUserInfo , userInfo } = useContext(AppContext);
     return (
 
         <SafeAreaView style={{ flex: 1 }}>
             <ScrollView>
-            <View style={styles.container}>
-                <View style={{}}>
-                    <Text style={{ fontSize: 30, fontWeight: "condensedBold", marginVertical: 20, paddingHorizontal: 10 }}>Welcome User</Text>
-                    <TextInput style={{ borderWidth: 1, borderRadius: 10, padding: 10, marginVertical: 20, fontSize: 24}} placeholder='Search Events' />
+                <View style={styles.container}>
+                    <View style={{ padding: 20, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                        <Text style={{ fontSize: 30, fontWeight: "condensedBold", }}>Hello</Text>
+                        <MaterialCommunityIcons name="account" size={45} color="grey" style={{ borderRadius: 100, borderWidth: 1, borderColor: "purple" }} onPress={() => { navigation.navigate("Account") }} />
+                    </View>
+
+                    <TouchableOpacity style={{ margin: 20, borderRadius: 10, padding: 20, elevation: 5, backgroundColor: "purple", opacity: 0.9 }}>
+                        <Text style={{ fontWeight: "bold", color: "grey", textAlign: "center", fontSize: 25 }}>RENEWED LIKE AN EAGLE</Text>
+                        <Text style={{ fontWeight: "bold", color: "grey", textAlign: "center", fontSize: 20 }}>Join us Tonight , Tuesday SEP 10</Text>
+                        <Text style={{ fontWeight: "bold", color: "grey", textAlign: "LEFT", fontSize: 15, marginTop: 20 }}>REVIVAL TUESDAY</Text>
+                        <Text style={{ fontWeight: "bold", color: "grey", textAlign: "left", fontSize: 12 }}>Tuesday, Sep 10 2024</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ margin: 20, borderRadius: 10, padding: 20, elevation: 5, backgroundColor: "orangered", opacity: 0.9 }}>
+                        <Text style={{ fontWeight: "bold", color: "grey", textAlign: "center", fontSize: 25 }}>OVERFLOWING PRESENCE</Text>
+                        <Text style={{ fontWeight: "bold", color: "grey", textAlign: "center", fontSize: 20 }}>Join us  SATURDAY at 10</Text>
+                        <Text style={{ fontWeight: "bold", color: "grey", textAlign: "LEFT", fontSize: 15, marginTop: 20 }}>FILLING SATURDAY</Text>
+                        <Text style={{ fontWeight: "bold", color: "grey", textAlign: "left", fontSize: 12 }}>Saturday, Sep 14 2024</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{backgroundColor:"purple", padding: 20, borderWidth:1 ,}}>
+                        <Text style={{color:"white", fontSize:20}}>Give</Text>
+                    </TouchableOpacity>
+
+
                 </View>
-
-                <View style={{ flexDirection: "row", justifyContent: "space-around", padding: 10, backgroundColor: "antiquewhite" }}>
-                    <View>
-                        <Image source={{ uri: "https://i.pinimg.com/736x/23/a2/f3/23a2f39014f3db9981ba006a536deb3b.jpg" }} style={{ width: 190, height: 160, borderRadius: 10,}} />
-                        <Text style={{ padding: 7, position: "absolute", top: 50, left: 50, color: "white", fontSize: 20, fontWeight: "bold", textTransform:"uppercase" }}>Sermons</Text>
-                    </View>
-                    <View>
-                        <Image source={{ uri: "https://i.pinimg.com/736x/23/a2/f3/23a2f39014f3db9981ba006a536deb3b.jpg" }} style={{ width: 190, height: 160, borderRadius: 10, }} />
-                        <Text style={{ padding: 7, position: "absolute", top: 50, left: 15, color: "white", fontSize: 20, fontWeight: "bold", textTransform:"uppercase" }}>Prayer request</Text>
-                    </View>
-                </View>
-                <View style={{ flexDirection: "row", justifyContent: "space-around", padding: 10, backgroundColor: "antiquewhite" }}>
-                    <View>
-                        <Image source={{ uri: "https://i.pinimg.com/736x/23/a2/f3/23a2f39014f3db9981ba006a536deb3b.jpg" }} style={{ width: 190, height: 160, borderRadius: 10, }} />
-                        <Text style={{ padding: 7, position: "absolute", top: 50, left: 50, color: "white", fontSize: 20, fontWeight: "bold", textTransform:"uppercase"}}>Sermons</Text>
-                    </View>
-                    <View>
-                        <Image source={{ uri: "https://i.pinimg.com/736x/23/a2/f3/23a2f39014f3db9981ba006a536deb3b.jpg" }} style={{ width: 190, height: 160, borderRadius: 10, }} />
-                        <Text style={{ padding: 7, position: "absolute", top: 50, left: 15, color: "white", fontSize: 20, fontWeight: "bold", textTransform:"uppercase" }}>Get connected</Text>
-                    </View>
-
-                </View>
-
-                <Text style={{ fontSize: 25, paddingHorizontal: 5, fontWeight: "bold", marginVertical:10 }}>Upcoming Events</Text>
-
-                <View>
-                    <View style={{marginVertical: 10}}>
-                        <Image source={{ uri: "https://t4.ftcdn.net/jpg/03/39/68/93/360_F_339689377_G6x4Hmjo9lmGUEytSBbU5cS3lEOkgU9m.jpg" }} style={{ height: 200, borderRadius: 10, }} />
-                        <Text style={{ padding: 7, position: "absolute", top: 70, left: 60, color: "white", fontSize: 30, fontWeight: "bold" }}>WOMEN'S MEETING</Text>
-                    </View>
-
-                    <View style={{marginVertical: 10}}>
-                        <Image source={{ uri: "https://t4.ftcdn.net/jpg/03/39/68/93/360_F_339689377_G6x4Hmjo9lmGUEytSBbU5cS3lEOkgU9m.jpg" }} style={{ height: 200, borderRadius: 10, }} />
-                        <Text style={{ padding: 7, position: "absolute", top: 70, left: 60, color: "white", fontSize: 30, fontWeight: "bold" }}>BIBLE STUDY NIGHT</Text>
-                    </View>
-                </View>
-
-
-
-
-            </View>
             </ScrollView>
         </SafeAreaView>
     )
@@ -63,6 +47,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 5,
-        backgroundColor: "antiquewhite",
+        backgroundColor: "white",
     }
 })

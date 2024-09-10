@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { MaterialIcons } from '@expo/vector-icons';
 
-export function More() {
+export function Account({navigation}) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor:"antiquewhite"
+    backgroundColor:"white"
   }
 })
